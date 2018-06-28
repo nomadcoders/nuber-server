@@ -12,5 +12,8 @@
     "ts-node": "^7.0.0",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
   }
 }
