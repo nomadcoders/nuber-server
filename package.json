@@ -7,6 +7,7 @@
   "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
     "@types/node": "^10.5.0",
     "babel-runtime": "^6.26.0",
     "dotenv": "^6.0.0",
@@ -23,6 +24,7 @@
     "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
   },
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "class-validator": "^0.8.5",
     "cors": "^2.8.4",
     "graphql-tools": "^3.0.4",
