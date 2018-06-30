@@ -8,13 +8,18 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^10.5.0",
+    "babel-runtime": "^6.26.0",
+    "gql-merge": "^0.0.6",
+    "graphql-to-typescript": "^0.1.2",
     "nodemon": "^1.17.5",
     "ts-node": "^7.0.0",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.9.2"
   },
   "scripts": {
-    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts"
   },
   "dependencies": {
     "cors": "^2.8.4",
