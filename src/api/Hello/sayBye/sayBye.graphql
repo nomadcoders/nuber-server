@@ -1,3 +1,3 @@
 type Query {
-  sayHello: String!
+  sayBye: String!
 }
