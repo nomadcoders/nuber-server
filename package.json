@@ -15,5 +15,11 @@
   },
   "scripts": {
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "graphql-yoga": "^1.14.10",
+    "helmet": "^3.12.1",
+    "morgan": "^1.9.0"
   }
 }
