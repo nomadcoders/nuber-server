@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^2.0.0",
+    "@types/jsonwebtoken": "^7.2.7",
     "@types/node": "^10.5.0",
     "@types/twilio": "^0.0.9",
     "babel-runtime": "^6.26.0",
@@ -32,6 +33,7 @@
     "graphql-tools": "^3.0.4",
     "graphql-yoga": "^1.14.10",
     "helmet": "^3.12.1",
+    "jsonwebtoken": "^8.3.0",
     "merge-graphql-schemas": "^1.5.2",
     "morgan": "^1.9.0",
     "pg": "^7.4.3",
