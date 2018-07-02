@@ -16,6 +16,14 @@ class App {
     this.app.express.use(cors());
     this.app.express.use(logger("dev"));
     this.app.express.use(helmet());
+    this.app.express.use(this.jwt);
+  };
+
+  private jwt = async (req, res, next): Promise<void> => {
+    const token = req.get("X-JWT");
+    if (token) {
+    }
+    next();
   };
 }
 
