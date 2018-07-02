@@ -5,7 +5,7 @@ const createJWT = (id: number): string => {
     {
       id
     },
-    process.env.JWT_TOKEN
+    process.env.JWT_TOKEN || ""
   );
   return token;
 };
