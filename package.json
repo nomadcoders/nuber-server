@@ -9,6 +9,7 @@
   "devDependencies": {
     "@types/bcrypt": "^2.0.0",
     "@types/node": "^10.5.0",
+    "@types/twilio": "^0.0.9",
     "babel-runtime": "^6.26.0",
     "dotenv": "^6.0.0",
     "gql-merge": "^0.0.6",
@@ -34,6 +35,7 @@
     "merge-graphql-schemas": "^1.5.2",
     "morgan": "^1.9.0",
     "pg": "^7.4.3",
+    "twilio": "^3.17.4",
     "typeorm": "^0.2.7"
   }
 }
