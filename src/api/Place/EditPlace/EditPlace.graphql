@@ -1,0 +1,8 @@
+type EditPlaceResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EditPlace(placeId: Int!, name: String, isFav: Boolean): EditPlaceResponse!
+}
