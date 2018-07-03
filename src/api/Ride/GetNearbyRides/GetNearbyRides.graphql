@@ -1,9 +1,0 @@
-type GetNearbyRidesResponse {
-  ok: Boolean!
-  error: String
-  rides: [Ride]
-}
-
-type Query {
-  GetNearbyRides: GetNearbyRidesResponse!
-}
