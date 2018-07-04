@@ -5,6 +5,7 @@ type Chat {
   passenger: User!
   driverId: Int
   driver: User!
+  rideId: Int
   ride: Ride!
   createdAt: String!
   updatedAt: String
