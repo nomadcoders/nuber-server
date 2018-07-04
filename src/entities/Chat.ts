@@ -16,7 +16,7 @@ import User from "./User";
 class Chat extends BaseEntity {
   @PrimaryGeneratedColumn() id: number;
 
-  @OneToMany(type => Message, message => message.chat)
+  @OneToMany(type => Message, message => message.chat, { nullable: true })
   messages: Message[];
 
   @Column({ nullable: true })
