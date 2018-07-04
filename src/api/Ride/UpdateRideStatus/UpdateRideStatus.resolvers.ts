@@ -1,3 +1,4 @@
+import Chat from "../../../entities/Chat";
 import Ride from "../../../entities/Ride";
 import User from "../../../entities/User";
 import {
@@ -20,14 +21,21 @@ const resolvers: Resolvers = {
           try {
             let ride: Ride | undefined;
             if (args.status === "ACCEPTED") {
-              ride = await Ride.findOne({
-                id: args.rideId,
-                status: "REQUESTING"
-              });
+              ride = await Ride.findOne(
+                {
+                  id: args.rideId,
+                  status: "REQUESTING"
+                },
+                { relations: ["passenger"] }
+              );
               if (ride) {
                 ride.driver = user;
                 user.isTaken = true;
                 user.save();
+                await Chat.create({
+                  driver: user,
+                  passenger: ride.passenger
+                }).save();
               }
             } else {
               ride = await Ride.findOne({

@@ -89,6 +89,7 @@ type GetRideResponse {
 
 type Subscription {
   NearbyRideSubscription: Ride
+  RideStatusSubscription: Ride
   DriversSubscription: User
 }
 
@@ -110,7 +111,9 @@ type Ride {
   price: Float!
   distance: String!
   duration: String!
+  driverId: Int
   driver: User!
+  passengerId: Int!
   passenger: User!
   createdAt: String!
   updatedAt: String
