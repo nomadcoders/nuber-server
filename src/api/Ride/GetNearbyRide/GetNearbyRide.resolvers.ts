@@ -13,11 +13,14 @@ const resolvers: Resolvers = {
         if (user.isDriving) {
           const { lastLat, lastLng } = user;
           try {
-            const ride = await getRepository(Ride).findOne({
-              status: "REQUESTING",
-              pickUpLat: Between(lastLat - 0.05, lastLat + 0.05),
-              pickUpLng: Between(lastLng - 0.05, lastLng + 0.05)
-            });
+            const ride = await getRepository(Ride).findOne(
+              {
+                status: "REQUESTING",
+                pickUpLat: Between(lastLat - 0.05, lastLat + 0.05),
+                pickUpLng: Between(lastLng - 0.05, lastLng + 0.05)
+              },
+              { relations: ["passenger"] }
+            );
             if (ride) {
               return {
                 ok: true,
