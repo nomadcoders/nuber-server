@@ -38,7 +38,7 @@
     "jsonwebtoken": "8.3.0",
     "mailgun-js": "0.19.0",
     "merge-graphql-schemas": "1.5.2",
-    "morgan": "1.9.0",
+    "morgan": "1.9.1",
     "nodemon": "1.17.5",
     "pg": "7.4.3",
     "ts-node": "7.0.0",
